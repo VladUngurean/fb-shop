@@ -23,7 +23,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -60,11 +60,11 @@
             <div class="price_block clearfix">
                 <div class="price_item old">
                     <div class="text">Обычная цена:</div>
-                    <div class="value" style="text-decoration: line-through;">299 000 сум</div>
+                    <div class="value" style="text-decoration: line-through;">980 лей</div>
                 </div>
                 <div class="price_item new">
                     <div class="text">Акционная цена:</div>
-                    <div class="value"> 149 000 сум</div>
+                    <div class="value">580 лей</div>
                 </div>
             </div>
 
@@ -335,16 +335,16 @@
             <div class="price_block clearfix">
                 <div class="price_item old">
                     <div class="text">Обычная цена:</div>
-                    <div class="value" style="text-decoration: line-through;">299 000 сум</div>
+                    <div class="value" style="text-decoration: line-through;">980 лей</div>
                 </div>
                 <div class="price_item new">
                     <div class="text">Акционная цена:</div>
-                    <div class="value">149 000 сум</div>
+                    <div class="value">580 лей</div>
                 </div>
             </div>
             <h4>Оставьте заявку сейчас</h4>
             <p>наш специалист позвонит вам и ответит на все ваши вопросы!</p>
-            <form id="order_form" class="main-order-form order_form" action="sent.html" method="post" onsubmit="if(!this.name.value){alert('Введите ваше им\' я!');return false}if(!this.phone.value){alert('Введите Ваш номер телефона!');return false}return true;">
+            <form id="order_form" class="main-order-form order_form" action="sent.html" method="get">
                 <input type="text" hidden="" name="language" value="ru" style="display: none;">
                 <input class="field" type="text" name="name" placeholder="Введите Ваше имя" required="" autocomplete="off">
                 <input class="field" type="tel" name="phone" placeholder="Введите телефон" required="" autocomplete="off">
@@ -406,7 +406,7 @@
 
     <script type="text/javascript" src="js/date.js"></script>
 
-    <script src="js/connect.js"></script>
+    <!-- <script src="js/connect.js"></script> -->
     <!-- /scripts -->
     <script src="js/phone_check_uz.js"></script>
 
