@@ -137,7 +137,7 @@
                 <img src="images/logo.png" alt="" class="logo">
                 <p>Найдите радость активной жизни</p>
             </div>
-            <a href="#order_form" class="button">Замовити зі знижкою</a>
+            <a href="#order_form" class="button">Заказать со скидкой</a>
         </section>
         <section class="sect3">
             <h2 class="title">Как работает Spine?</h2>
@@ -204,7 +204,7 @@
                             поездка с ним полностью оправдала мои ожидания. Начал носить его на постоянной основе. Из-за
                             неделю, даже жена заметила, что я словно кадетский курсант стою с идеально ровной осанкой и
                             широко расправленными плечами и без боли в спине.</p>
-                        <div class="name">Муса Ханраев , 43 года, Карши</div>
+                        <div class="name">Николай Рабей, 43 года, Кишинёв</div>
                     </div>
                 </div>
                 <div class="review_item">
@@ -212,22 +212,22 @@
                     <div class="text_block">
                         <div class="author_info">«Сейчас даже без корректора сижу с ровной спиной»</div>
                         <p>Знаю, как важно сидеть с ровной спиной, когда понимаю, что сижу вся сгорбленная – выпрямляюсь.
-                            Достаточно меня минут на 20 максимум, потом уже просто мышцы устают. �&nbsp;ешила заказать корректор для
+                            Достаточно меня минут на 20 максимум, потом уже просто мышцы устают. Решила заказать корректор для
                             спины, чтобы решить данный вопрос. В итоге, в первый день использования было необычно, а на
                             следующий уже вообще его не ощущала. Сейчас даже без корректора сижу с ровной спиной)</p>
-                        <div class="name">Диларам Ганиева, 29 лет, Косон</div>
+                        <div class="name">Алексей Погожий, 29 лет, Кишинёв</div>
                     </div>
                 </div>
                 <div class="review_item">
                     <img class="photo" src="images/rev3.jpg" alt="">
                     <div class="text_block">
                         <div class="author_info">«Спину держит действительно очень хорошо»</div>
-                        <p>�&nbsp;аботаю в офисе и очень много времени провожу за компьютером. Как следствие начал беспокоить
+                        <p>Работаю в офисе и очень много времени провожу за компьютером. Как следствие начал беспокоить
                             шейный отдел позвоночника. Чтобы не запускать эту ситуацию, решил приобрести корректор
                             для спины. Доставили быстро, всего через 4 дня. Спина держит действительно очень хорошо. В первый
                             день использования шея уже прошла. Сейчас помогает мне всегда сидеть с идеально ровной спиной и
                             при этом не уставать на исходе дня - чувствую себя намного лучше.</p>
-                        <div class="name">Шакир Якшымов, 32 года, Нукус</div>
+                        <div class="name">Тудор Бологан, 32 года, Кишинёв</div>
                     </div>
                 </div>
             </div>
@@ -238,7 +238,7 @@
                 <div class="audio_item clearfix">
                     <img src="ava1" alt="">
                     <div class="text">
-                        <span>Михайло Зинов'єв, 31 год, Учькудук</span>
+                        <span>Михаил Зеновьев, 31 год, Кишинёв</span>
                         <p>«Я дополнительно хожу на массаж, но без корректора таких результатов не было бы...»</p>
                         <b>Слушать отзыв полностью:</b>
                         <audio controls="" controlslist="nodownload">
@@ -251,7 +251,7 @@
                 <div class="audio_item clearfix">
                     <img src="images/ava2.png" alt="">
                     <div class="text">
-                        <span>Виталий Александровичь, 29 лет, Зарафшан</span>
+                        <span>Виталий Александрович, 29 лет, Кишинёв</span>
                         <p>«Благодаря корректору начал понемногу заниматься спортом, сбрасываю лишний вес...»</p>
                         <b>Слушать отзыв полностью:</b>
                         <audio controls="" controlslist="nodownload">
@@ -264,7 +264,7 @@
                 <div class="audio_item clearfix">
                     <img src="images/au3.jpg" alt="">
                     <div class="text">
-                        <span>Наталия Андреевна, 33 года, Самарканд</span>
+                        <span>Наталия Андреевна, 33 года, Кишинёв</span>
                         <p>«Наконец-то закончился этот кошмар, спина болела и днем и ночью...»</p>
                         <b>Слушать отзыв полностью:</b>
                         <audio controls="" controlslist="nodownload">
@@ -345,64 +345,31 @@
             <h4>Оставьте заявку сейчас</h4>
             <p>наш специалист позвонит вам и ответит на все ваши вопросы!</p>
             <form id="order_form" class="main-order-form order_form" action="sent.html" method="get">
-                <input type="text" hidden="" name="language" value="ru" style="display: none;">
-                <input class="field" type="text" name="name" placeholder="Введите Ваше имя" required="" autocomplete="off">
-                <input class="field" type="tel" name="phone" placeholder="Введите телефон" required="" autocomplete="off">
+                <input class="field" type="text" name="user-name" pattern="[a-zA-Zа-яА-Я]+" placeholder="Введите Ваше имя" required minlength="3" maxlength="10" autocomplete="off">
+                <input id="phone" class="field" type="tel" name="phone" oninput="checkInput()" placeholder="Введите телефон" required autocomplete="off">
                 <button class="button" type="submit">Заказать со скидкой</button>
 
             </form>
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
 
-                    $('#order_form').on('submit', async function (e) {
-                        // e.preventDefault();
-                        console.log('Order validation', this);
-                        console.log('Order validation (event)', e);
-
-                        var check = phone_check(this);
-                        console.log('Phone check', check);
-                        if (check === false) {
-                            return false;
-                        }
-
-                        if (this.name.value == '') {
-                            alert('Enter your name');
-                            return false;
-                        }
-
-                        if (this.phone.value == '') {
-                            alert('Enter your phone number');
-                            return false;
-                        }
-                        $(this).find('button').attr('disabled', 'disabled');
-                        console.log('Order processing');
-
-                        // return true;
-                        // return false;
-                    });
-
-                });
-            </script>
             <div class="products_count">Осталось <b>5</b> штук по акции</div>
         </section>
         <div class="conf">100% конфиденциальность. <br>Ваши данные не будут переданы третьим лицам.</div>
-        <footer class="footer_section">
-            <p style="font-weight: bold; margin-bottom: 15px; line-height: normal;">Официальный дистрибьютор бренда Sleek Soul<br>на территории �&nbsp;еспублики Узбекистан</p>
+        <!-- <footer class="footer_section">
             <br>107 Б Амир Темур шоҳ кўчаси, Тошкент 100084, Узбекистан
             <br>2017-2024. Все права защищены.
             <br><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="38505d545457784b545d5d534b574d54165b5755">[email�&nbsp;protected]</a>
             <p style="margin-top: 0; color: #222;">На нашем сайте действует:</p>
             <a target="" href="politics.html">Политика конфиденциальности сайта</a>
             <br><a target="_blank" href="https://www.facebook.com/about/privacy/update">Политика использования данных Facebook</a>
-        </footer>
+        </footer> -->
     </div>
     <!-- scripts -->
-
-    <script data-cfasync="false" src="js/email-decode.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <!-- <script data-cfasync="false" src="js/email-decode.min.js"></script> -->
     <script src="js/jquery.min_1.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <script src="js/scripts.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script src="js/scripts.js" defer></script>
 
     <script type="text/javascript" src="js/date.js"></script>
 
