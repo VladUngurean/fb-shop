@@ -722,14 +722,14 @@ h2.title > span {
   background-color: #fff;
 }
 
-.offer_section .field[name="user-name"] {
+.offer_section .field[name="user_name"] {
   margin-top: 25px;
   background-image: url(../images/offer__name_icon.png);
   background-position: 23px center;
   background-repeat: no-repeat;
 }
 
-.offer_section .field[name="phone"] {
+.offer_section .field[name="user_phone"] {
   background-image: url(../images/offer__phone_icon.png);
   background-position: 20px center;
   background-repeat: no-repeat;

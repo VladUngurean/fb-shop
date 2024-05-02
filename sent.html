@@ -49,7 +49,7 @@
     });
   </script>
 
-
+  <script src="sent-js/supplementary_order.js" defer></script>
 </head>
 
 <body>
@@ -68,266 +68,274 @@
     <div class="notification-top-wrapper">
       <div class="notification-top">
         <div class="notification-top-left">
-          Вы добавили <span class="notification-top-quantity">1</span> <span class="notification-top-goods">товар</span>
+          Вы добавили <span class="notification-top-quantity">0</span> <span class="notification-top-goods">товар</span>
         </div>
-        <form action="thank-you.html" method="get" class="notification-top-right">
-          <button type="submit" class="notification-top-button">Продолжить</button>
-          <input class="notification-top-input" hidden="" name="upsell" value="[]">
-        </form>
+        <button id="sendOrderButton" type="submit" class="notification-top-button">Продолжить</button>
+        <input class="notification-top-input" hidden="" name="upsell" value="[]">
       </div>
     </div>
     <!-- Top notification END -->
 
 
+    <!-- Products START -->
+    <form id="sendOrderForm" action="" method="get">
 
-    <section class="description_section" style="background: #fff;">
-      <h2 class="title">
-        <p>Массажер для лица и тела</p>
-      </h2>
-    </section>
-    <div class="slider owl-carousel">
-      <img class="image" src="images/5AlcqIhQ.webp" alt="">
-      <img class="image" src="images/z0QDUaDi.webp" alt="0">
-      <img class="image" src="images/h2ocLNts.webp" alt="0">
+      <section class="description_section" style="background: #fff;">
+        <h2 class="title">
+          <p>Массажер для лица и тела</p>
+        </h2>
+      </section>
+      <div class="slider owl-carousel">
+        <img class="image" src="images/5AlcqIhQ.webp" alt="">
+        <img class="image" src="images/z0QDUaDi.webp" alt="0">
+        <img class="image" src="images/h2ocLNts.webp" alt="0">
 
-    </div>
-    <section class="offer_section offer2 order" style="background: #f6f6f6; padding-bottom: 30px;">
-      <div class="price_block clearfix">
-        <div class="price_item old">
-          <div class="text">Обычная цена:</div>
-          <div class="value">269 000 сум </div>
-        </div>
-        <div class="discount" style="z-index: 999;">
-          <div class="text">Sale</div>
-          <div class="value">-64%</div>
-        </div>
-        <div class="price_item new">
-          <div class="text">Новая цена:</div>
-          <div class="value">99 000 сум </div>
-        </div>
       </div>
-      <!-- <center><iframe width="440" height="245" src="https://www.youtube.com/embed/dBf2-bARI3k" style="margin-bottom: 15px; border-radius: 7px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> -->
-      <div style="text-align: center; margin-bottom: 25px; font-size: 16px; line-height: 26px; padding: 0 20px;">
-        <p class="p1">✅ Интенсивное омоложение кожи</p>
-        <p class="p1">✅ Подтяжка кожи для четких контуров</p>
-        <p class="p1">✅ Видимые результаты уже через неделю</p>
-      </div>
-      <form action="thank-you.html" method="post">
-        <button type="submit" class="button">Добавить товар</button>
-        <input type="hidden" name="offer" value="32">
-      </form>
-      <div class="stock">Осталось по акции: <b>8 шт.</b></div>
-    </section>
-    <section class="description_section" style="background: #fff;">
-      <h2 class="title">
-        <p>БАНДАЖ ДЛЯ ЛИЦА</p>
-      </h2>
-    </section>
-    <div class="slider owl-carousel">
-      <img class="image" src="images/1713801058.jpeg" alt="">
-      <img class="image" src="images/1713801113.jpeg" alt="">
+      <section class="offer_section offer2 order" style="background: #f6f6f6; padding-bottom: 30px;">
+        <div class="price_block clearfix">
+          <div class="price_item old">
+            <div class="text">Обычная цена:</div>
+            <div class="value">269 000 сум </div>
+          </div>
+          <div class="discount" style="z-index: 999;">
+            <div class="text">Sale</div>
+            <div class="value">-64%</div>
+          </div>
+          <div class="price_item new">
+            <div class="text">Новая цена:</div>
+            <div class="value">99 000 сум </div>
+          </div>
+        </div>
+        <!-- <center><iframe width="440" height="245" src="https://www.youtube.com/embed/dBf2-bARI3k" style="margin-bottom: 15px; border-radius: 7px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> -->
+        <div style="text-align: center; margin-bottom: 25px; font-size: 16px; line-height: 26px; padding: 0 20px;">
+          <p class="p1">✅ Интенсивное омоложение кожи</p>
+          <p class="p1">✅ Подтяжка кожи для четких контуров</p>
+          <p class="p1">✅ Видимые результаты уже через неделю</p>
+        </div>
+        <label for="off1" class="button">
+          <input id="off1" class="tov-item-checkbox" type="checkbox" value="oof1">
+          <span>Добавить товар</span>
+        </label>
+        <div class="stock">Осталось по акции: <b>8 шт.</b></div>
+      </section>
 
-    </div>
-    <section class="offer_section offer2 order" style="background: #f6f6f6; padding-bottom: 30px;">
-      <div class="price_block clearfix">
-        <div class="price_item old">
-          <div class="text">Обычная цена:</div>
-          <div class="value">149 000 сум </div>
-        </div>
-        <div class="discount" style="z-index: 999;">
-          <div class="text">Sale</div>
-          <div class="value">-34%</div>
-        </div>
-        <div class="price_item new">
-          <div class="text">Новая цена:</div>
-          <div class="value">99 000 сум </div>
-        </div>
-      </div>
-      <!-- <center><iframe width="440" height="245" src="https://www.youtube.com/embed/dBf2-bARI3k" style="margin-bottom: 15px; border-radius: 7px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> -->
-      <div style="text-align: center; margin-bottom: 25px; font-size: 16px; line-height: 26px; padding: 0 20px;">
-        <p>Эластичная маска для лица - это инновационное средство, предназначенное для эффективного подтягивания кожи и придания ей упругости. Специально разработанный эластичный материал обеспечивает идеальное прилегание к контурам лица, обеспечивая оптимальное плотное прилегание, что максимизирует контакт с кожей и повышает эффективность процедуры.</p>
-      </div>
-      <form action="thank-you.html" method="post">
-        <button type="submit" class="button">Добавить товар</button>
-        <input type="hidden" name="offer" value="62">
-      </form>
-      <div class="stock">В наличии осталось: <b>10 штук</b></div>
-    </section>
-    <section class="description_section" style="background: #fff;">
-      <h2 class="title">
-        <p>МИНИ-ПЛОЙКА</p>
-      </h2>
-    </section>
-    <div class="slider owl-carousel">
-      <img class="image" src="images/tjeVAs0X.webp" alt="">
-      <img class="image" src="images/G7O8mban.webp" alt="">
+      <section class="description_section" style="background: #fff;">
+        <h2 class="title">
+          <p>БАНДАЖ ДЛЯ ЛИЦА</p>
+        </h2>
+      </section>
+      <div class="slider owl-carousel">
+        <img class="image" src="images/1713801058.jpeg" alt="">
+        <img class="image" src="images/1713801113.jpeg" alt="">
 
-    </div>
-    <section class="offer_section offer2 order" style="background: #f6f6f6; padding-bottom: 30px;">
-      <div class="price_block clearfix">
-        <div class="price_item old">
-          <div class="text">Обычная цена:</div>
-          <div class="value">149 000 сум </div>
-        </div>
-        <div class="discount" style="z-index: 999;">
-          <div class="text">Sale</div>
-          <div class="value">-26%</div>
-        </div>
-        <div class="price_item new">
-          <div class="text">Новая цена:</div>
-          <div class="value">110 000 сум </div>
-        </div>
       </div>
-      <!-- <center><iframe width="440" height="245" src="https://www.youtube.com/embed/dBf2-bARI3k" style="margin-bottom: 15px; border-radius: 7px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> -->
-      <div style="text-align: center; margin-bottom: 25px; font-size: 16px; line-height: 26px; padding: 0 20px;">
-        <p>Эта горячая расческа мини-выпрямитель портативный инструмент для ухода за волосами, который легко поместится в сумочку и даже в карман. С многофункциональным дизайном, мини-плойка поможет вам всегда выглядеть на высоте, будь то дома на улиц, на работе. Получите идеальные волосы без лишних хлопот с удивительной горячей и выпрямителем в одном!</p>
-      </div>
-      <form action="thank-you.html" method="post">
-        <button type="submit" class="button">Добавить товар</button>
-        <input type="hidden" name="offer" value="45">
-      </form>
-      <div class="stock">В наличии осталось: <b>5 штук</b></div>
-    </section>
-    <section class="description_section" style="background: #fff;">
-      <h2 class="title">
-        <p><strong>Беспроводная пилка-пемза для пяток</strong></p>
-      </h2>
-    </section>
-    <div class="slider owl-carousel">
-      <img class="image" src="images/OHvzdep9.webp" alt="">
-      <img class="image" src="images/rn5NgIqb.webp" alt="">
+      <section class="offer_section offer2 order" style="background: #f6f6f6; padding-bottom: 30px;">
+        <div class="price_block clearfix">
+          <div class="price_item old">
+            <div class="text">Обычная цена:</div>
+            <div class="value">149 000 сум </div>
+          </div>
+          <div class="discount" style="z-index: 999;">
+            <div class="text">Sale</div>
+            <div class="value">-34%</div>
+          </div>
+          <div class="price_item new">
+            <div class="text">Новая цена:</div>
+            <div class="value">99 000 сум </div>
+          </div>
+        </div>
+        <!-- <center><iframe width="440" height="245" src="https://www.youtube.com/embed/dBf2-bARI3k" style="margin-bottom: 15px; border-radius: 7px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> -->
+        <div style="text-align: center; margin-bottom: 25px; font-size: 16px; line-height: 26px; padding: 0 20px;">
+          <p>Эластичная маска для лица - это инновационное средство, предназначенное для эффективного подтягивания кожи и придания ей упругости. Специально разработанный эластичный материал обеспечивает идеальное прилегание к контурам лица, обеспечивая оптимальное плотное прилегание, что максимизирует контакт с кожей и повышает эффективность процедуры.</p>
+        </div>
+        <label for="off2" class="button">
+          <input id="off2" class="tov-item-checkbox" type="checkbox" value="oof2">
+          <span>Добавить товар</span>
+        </label>
+        <div class="stock">В наличии осталось: <b>10 штук</b></div>
+      </section>
 
-    </div>
-    <section class="offer_section offer2 order" style="background: #f6f6f6; padding-bottom: 30px;">
-      <div class="price_block clearfix">
-        <div class="price_item old">
-          <div class="text">Обычная цена:</div>
-          <div class="value">300 000 сум</div>
-        </div>
-        <div class="discount" style="z-index: 999;">
-          <div class="text">Sale</div>
-          <div class="value">-80%</div>
-        </div>
-        <div class="price_item new">
-          <div class="text">Новая цена:</div>
-          <div class="value">55 000 сум</div>
-        </div>
-      </div>
-      <!-- <center><iframe width="440" height="245" src="https://www.youtube.com/embed/dBf2-bARI3k" style="margin-bottom: 15px; border-radius: 7px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> -->
-      <div style="text-align: center; margin-bottom: 25px; font-size: 16px; line-height: 26px; padding: 0 20px;">
-        <p>Электрическая пемза Pedi Vacuum надёжный способ удаления жёсткой и огрубевшей кожи стоп ног. Её применение не отнимает много времени и не распространяет пыль при применении "на сухую", она безопасна и выполняет свою работу безболезненно. Вы увидите заметный результат уже после первого применения.</p>
-      </div>
-      <form action="thank-you.html" method="post">
-        <button type="submit" class="button">Добавить товар</button>
-        <input type="hidden" name="offer" value="20">
-      </form>
-      <div class="stock">В наличии осталось: <b>5 штук</b></div>
-    </section>
-    <section class="description_section" style="background: #fff;">
-      <h2 class="title">
-        <p>НАБОР ДЛЯ ЧИСТКИ УШЕЙ</p>
-      </h2>
-    </section>
-    <div class="slider owl-carousel">
-      <img class="image" src="images/WLhvudEd.webp" alt="">
+      <section class="description_section" style="background: #fff;">
+        <h2 class="title">
+          <p>МИНИ-ПЛОЙКА</p>
+        </h2>
+      </section>
+      <div class="slider owl-carousel">
+        <img class="image" src="images/tjeVAs0X.webp" alt="">
+        <img class="image" src="images/G7O8mban.webp" alt="">
 
-    </div>
-    <section class="offer_section offer2 order" style="background: #f6f6f6; padding-bottom: 30px;">
-      <div class="price_block clearfix">
-        <div class="price_item old">
-          <div class="text">Обычная цена:</div>
-          <div class="value">198 000 сум </div>
-        </div>
-        <div class="discount" style="z-index: 999;">
-          <div class="text">Sale</div>
-          <div class="value">-62%</div>
-        </div>
-        <div class="price_item new">
-          <div class="text">Новая цена:</div>
-          <div class="value">75 000 сум </div>
-        </div>
       </div>
-      <!-- <center><iframe width="440" height="245" src="https://www.youtube.com/embed/dBf2-bARI3k" style="margin-bottom: 15px; border-radius: 7px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> -->
-      <div style="text-align: center; margin-bottom: 25px; font-size: 16px; line-height: 26px; padding: 0 20px;">
-        <p>Инструменты для чистки ушей медицинский изготовлен из высококачественной стали и подходит для любых видов стерилизации. Используется для чистки ушей как в домашних, так и в профессиональных условиях.</p>
-      </div>
-      <form action="thank-you.html" method="post">
-        <button type="submit" class="button">Добавить товар</button>
-        <input type="hidden" name="offer" value="54">
-      </form>
-      <div class="stock">В наличии осталось: <b>5 наборов</b></div>
-    </section>
-    <section class="description_section" style="background: #fff;">
-      <h2 class="title">
-        <p>ПАТЧИ ДЛЯ НОГ ОТ ЗАПАХОВ</p>
-      </h2>
-    </section>
-    <div class="slider owl-carousel">
-      <img class="image" src="images/1713739582.webp" alt="">
-      <img class="image" src="images/1713739583.webp" alt="">
+      <section class="offer_section offer2 order" style="background: #f6f6f6; padding-bottom: 30px;">
+        <div class="price_block clearfix">
+          <div class="price_item old">
+            <div class="text">Обычная цена:</div>
+            <div class="value">149 000 сум </div>
+          </div>
+          <div class="discount" style="z-index: 999;">
+            <div class="text">Sale</div>
+            <div class="value">-26%</div>
+          </div>
+          <div class="price_item new">
+            <div class="text">Новая цена:</div>
+            <div class="value">110 000 сум </div>
+          </div>
+        </div>
+        <!-- <center><iframe width="440" height="245" src="https://www.youtube.com/embed/dBf2-bARI3k" style="margin-bottom: 15px; border-radius: 7px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> -->
+        <div style="text-align: center; margin-bottom: 25px; font-size: 16px; line-height: 26px; padding: 0 20px;">
+          <p>Эта горячая расческа мини-выпрямитель портативный инструмент для ухода за волосами, который легко поместится в сумочку и даже в карман. С многофункциональным дизайном, мини-плойка поможет вам всегда выглядеть на высоте, будь то дома на улиц, на работе. Получите идеальные волосы без лишних хлопот с удивительной горячей и выпрямителем в одном!</p>
+        </div>
+        <form action="thank-you.html" method="post">
+          <button type="submit" class="button">Добавить товар</button>
+          <input type="hidden" name="offer" value="45">
+        </form>
+        <div class="stock">В наличии осталось: <b>5 штук</b></div>
+      </section>
 
-    </div>
-    <section class="offer_section offer2 order" style="background: #f6f6f6; padding-bottom: 30px;">
-      <div class="price_block clearfix">
-        <div class="price_item old">
-          <div class="text">Обычная цена:</div>
-          <div class="value">115 000 сум </div>
-        </div>
-        <div class="discount" style="z-index: 999;">
-          <div class="text">Sale</div>
-          <div class="value">-26%</div>
-        </div>
-        <div class="price_item new">
-          <div class="text">Новая цена:</div>
-          <div class="value">85 000 сум </div>
-        </div>
-      </div>
-      <!-- <center><iframe width="440" height="245" src="https://www.youtube.com/embed/dBf2-bARI3k" style="margin-bottom: 15px; border-radius: 7px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> -->
-      <div style="text-align: center; margin-bottom: 25px; font-size: 16px; line-height: 26px; padding: 0 20px;">
-        <p>Теперь вы можете быть уверены, что ваша обувь всегда будет пахнуть свежестью и чистотой. Одна пара рассчитана в среднем на 7 дней. Уникальность наших стикеров для стельки также заключается в их антибактериальном эффекте. Они не только освежают обувь, но и снижают количество бактерий, что помогает бороться с неприятным запахом и возможными инфекциями.</p>
-      </div>
-      <form action="thank-you.html" method="post">
-        <button type="submit" class="button">Добавить товар</button>
-        <input type="hidden" name="offer" value="44">
-      </form>
-      <div class="stock">Осталось по акции: <b>12 штук</b></div>
-    </section>
-    <section class="description_section" style="background: #fff;">
-      <h2 class="title">
-        <p>РАЗДЕЛИТЕЛЬ ДЛЯ ПАЛЬЦЕВ НОГ</p>
-      </h2>
-    </section>
-    <div class="slider owl-carousel">
-      <img class="image" src="images/DyJ7sJwN.webp" alt="">
-      <img class="image" src="images/gieqmK3Y.webp" alt="">
-      <img class="image" src="images/w7plDviG.webp" alt="">
+      <section class="description_section" style="background: #fff;">
+        <h2 class="title">
+          <p><strong>Беспроводная пилка-пемза для пяток</strong></p>
+        </h2>
+      </section>
+      <div class="slider owl-carousel">
+        <img class="image" src="images/OHvzdep9.webp" alt="">
+        <img class="image" src="images/rn5NgIqb.webp" alt="">
 
-    </div>
-    <section class="offer_section offer2 order" style="background: #f6f6f6; padding-bottom: 30px;">
-      <div class="price_block clearfix">
-        <div class="price_item old">
-          <div class="text">Обычная цена:</div>
-          <div class="value">149 000 сум </div>
-        </div>
-        <div class="discount" style="z-index: 999;">
-          <div class="text">Sale</div>
-          <div class="value">-23%</div>
-        </div>
-        <div class="price_item new">
-          <div class="text">Новая цена:</div>
-          <div class="value">115 000 сум </div>
-        </div>
       </div>
-      <!-- <center><iframe width="440" height="245" src="https://www.youtube.com/embed/dBf2-bARI3k" style="margin-bottom: 15px; border-radius: 7px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> -->
-      <div style="text-align: center; margin-bottom: 25px; font-size: 16px; line-height: 26px; padding: 0 20px;">
-        <p>Предназначен для лечения, защиты и коррекции вальгусной деформации (косточка около большого пальца) ступни. Такой выпрямитель позволит вам избежать появления межпальцевой мозоли, натирания, вальгуса и других неприятностей.</p>
+      <section class="offer_section offer2 order" style="background: #f6f6f6; padding-bottom: 30px;">
+        <div class="price_block clearfix">
+          <div class="price_item old">
+            <div class="text">Обычная цена:</div>
+            <div class="value">300 000 сум</div>
+          </div>
+          <div class="discount" style="z-index: 999;">
+            <div class="text">Sale</div>
+            <div class="value">-80%</div>
+          </div>
+          <div class="price_item new">
+            <div class="text">Новая цена:</div>
+            <div class="value">55 000 сум</div>
+          </div>
+        </div>
+        <!-- <center><iframe width="440" height="245" src="https://www.youtube.com/embed/dBf2-bARI3k" style="margin-bottom: 15px; border-radius: 7px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> -->
+        <div style="text-align: center; margin-bottom: 25px; font-size: 16px; line-height: 26px; padding: 0 20px;">
+          <p>Электрическая пемза Pedi Vacuum надёжный способ удаления жёсткой и огрубевшей кожи стоп ног. Её применение не отнимает много времени и не распространяет пыль при применении "на сухую", она безопасна и выполняет свою работу безболезненно. Вы увидите заметный результат уже после первого применения.</p>
+        </div>
+        <form action="thank-you.html" method="post">
+          <button type="submit" class="button">Добавить товар</button>
+          <input type="hidden" name="offer" value="20">
+        </form>
+        <div class="stock">В наличии осталось: <b>5 штук</b></div>
+      </section>
+
+      <section class="description_section" style="background: #fff;">
+        <h2 class="title">
+          <p>НАБОР ДЛЯ ЧИСТКИ УШЕЙ</p>
+        </h2>
+      </section>
+      <div class="slider owl-carousel">
+        <img class="image" src="images/WLhvudEd.webp" alt="">
+
       </div>
-      <form action="thank-you.html" method="post">
-        <button type="submit" class="button">Добавить товар</button>
-        <input type="hidden" name="offer" value="69">
-      </form>
-      <div class="stock">Осталось в наличии: <b>5 штук</b></div>
-    </section>
+      <section class="offer_section offer2 order" style="background: #f6f6f6; padding-bottom: 30px;">
+        <div class="price_block clearfix">
+          <div class="price_item old">
+            <div class="text">Обычная цена:</div>
+            <div class="value">198 000 сум </div>
+          </div>
+          <div class="discount" style="z-index: 999;">
+            <div class="text">Sale</div>
+            <div class="value">-62%</div>
+          </div>
+          <div class="price_item new">
+            <div class="text">Новая цена:</div>
+            <div class="value">75 000 сум </div>
+          </div>
+        </div>
+        <!-- <center><iframe width="440" height="245" src="https://www.youtube.com/embed/dBf2-bARI3k" style="margin-bottom: 15px; border-radius: 7px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> -->
+        <div style="text-align: center; margin-bottom: 25px; font-size: 16px; line-height: 26px; padding: 0 20px;">
+          <p>Инструменты для чистки ушей медицинский изготовлен из высококачественной стали и подходит для любых видов стерилизации. Используется для чистки ушей как в домашних, так и в профессиональных условиях.</p>
+        </div>
+        <form action="thank-you.html" method="post">
+          <button type="submit" class="button">Добавить товар</button>
+          <input type="hidden" name="offer" value="54">
+        </form>
+        <div class="stock">В наличии осталось: <b>5 наборов</b></div>
+      </section>
+
+      <section class="description_section" style="background: #fff;">
+        <h2 class="title">
+          <p>ПАТЧИ ДЛЯ НОГ ОТ ЗАПАХОВ</p>
+        </h2>
+      </section>
+      <div class="slider owl-carousel">
+        <img class="image" src="images/1713739582.webp" alt="">
+        <img class="image" src="images/1713739583.webp" alt="">
+
+      </div>
+      <section class="offer_section offer2 order" style="background: #f6f6f6; padding-bottom: 30px;">
+        <div class="price_block clearfix">
+          <div class="price_item old">
+            <div class="text">Обычная цена:</div>
+            <div class="value">115 000 сум </div>
+          </div>
+          <div class="discount" style="z-index: 999;">
+            <div class="text">Sale</div>
+            <div class="value">-26%</div>
+          </div>
+          <div class="price_item new">
+            <div class="text">Новая цена:</div>
+            <div class="value">85 000 сум </div>
+          </div>
+        </div>
+        <!-- <center><iframe width="440" height="245" src="https://www.youtube.com/embed/dBf2-bARI3k" style="margin-bottom: 15px; border-radius: 7px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> -->
+        <div style="text-align: center; margin-bottom: 25px; font-size: 16px; line-height: 26px; padding: 0 20px;">
+          <p>Теперь вы можете быть уверены, что ваша обувь всегда будет пахнуть свежестью и чистотой. Одна пара рассчитана в среднем на 7 дней. Уникальность наших стикеров для стельки также заключается в их антибактериальном эффекте. Они не только освежают обувь, но и снижают количество бактерий, что помогает бороться с неприятным запахом и возможными инфекциями.</p>
+        </div>
+        <form action="thank-you.html" method="post">
+          <button type="submit" class="button">Добавить товар</button>
+          <input type="hidden" name="offer" value="44">
+        </form>
+        <div class="stock">Осталось по акции: <b>12 штук</b></div>
+      </section>
+
+      <section class="description_section" style="background: #fff;">
+        <h2 class="title">
+          <p>РАЗДЕЛИТЕЛЬ ДЛЯ ПАЛЬЦЕВ НОГ</p>
+        </h2>
+      </section>
+      <div class="slider owl-carousel">
+        <img class="image" src="images/DyJ7sJwN.webp" alt="">
+        <img class="image" src="images/gieqmK3Y.webp" alt="">
+        <img class="image" src="images/w7plDviG.webp" alt="">
+
+      </div>
+      <section class="offer_section offer2 order" style="background: #f6f6f6; padding-bottom: 30px;">
+        <div class="price_block clearfix">
+          <div class="price_item old">
+            <div class="text">Обычная цена:</div>
+            <div class="value">149 000 сум </div>
+          </div>
+          <div class="discount" style="z-index: 999;">
+            <div class="text">Sale</div>
+            <div class="value">-23%</div>
+          </div>
+          <div class="price_item new">
+            <div class="text">Новая цена:</div>
+            <div class="value">115 000 сум </div>
+          </div>
+        </div>
+        <!-- <center><iframe width="440" height="245" src="https://www.youtube.com/embed/dBf2-bARI3k" style="margin-bottom: 15px; border-radius: 7px;" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> -->
+        <div style="text-align: center; margin-bottom: 25px; font-size: 16px; line-height: 26px; padding: 0 20px;">
+          <p>Предназначен для лечения, защиты и коррекции вальгусной деформации (косточка около большого пальца) ступни. Такой выпрямитель позволит вам избежать появления межпальцевой мозоли, натирания, вальгуса и других неприятностей.</p>
+        </div>
+        <form action="thank-you.html" method="post">
+          <button type="submit" class="button">Добавить товар</button>
+          <input type="hidden" name="offer" value="69">
+        </form>
+        <div class="stock">Осталось в наличии: <b>5 штук</b></div>
+      </section>
+    </form>
+    <!-- Products END -->
 
 
 
@@ -336,8 +344,8 @@
     </section>
   </div>
 
-  <script src="sent-js/jquery.js"></script>
-  <script src="sent-js/owl.carousel.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
   <script src="sent-js/scripts.js"></script>
   <script src="sent-js/upsell-widget.js"></script>
 
