@@ -1,7 +1,7 @@
 // //Константи для бота телеграм
-// const TOKEN = '6876888038:AAEOSaVQM4wUjmoySghtx_E9aYgmj-yjx1k';
-// const CHAT_ID = '518855311';
-// const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+const TOKEN = '6876888038:AAEOSaVQM4wUjmoySghtx_E9aYgmj-yjx1k';
+const CHAT_ID = '518855311';
+const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 document.querySelectorAll(".tov-button").forEach(e =>{
 	e.addEventListener("change", ()=>{
@@ -22,6 +22,8 @@ const urlParams = new URLSearchParams(window.location.search);
 const productName = urlParams.get('product_name');
 const userName = urlParams.get('user_name');
 const userPhone = urlParams.get('user_phone');
+
+console.log(userName, userPhone, productName);
 
 let checkboxSupplementary = document.querySelectorAll(".tov-item-checkbox");
 checkboxSupplementary.forEach(e =>{
@@ -78,31 +80,33 @@ sendOrderButton.addEventListener( 'click', ( e ) => {
 					massage += `Дополнительно: ${e.value} \n`;
 				}
 			})
-			console.log(isAtLeastOneChecked);
-	
 			console.log(massage);
+	// 		console.log(isAtLeastOneChecked);
+	
+	// 		console.log(massage);
 			axios.post(URI_API, {
 				chat_id: CHAT_ID,
 				parse_mode: 'html',
 				text: massage
 			})
 			.then( ( res ) => {
-				// massageText.innerHTML = 'Дякуємо за замовлення! <br> Наші менеджери зв\'яжуться з вами вже найближчим часом для уточнення деталей';
 				setTimeout( () => {
 					sendOrderForm.submit();
-					location.href = "thank-you-page.html";
+					location.href = "thank-you.html";
 				}, 0 );
 			} )
 			.catch( ( err ) => {
 				console.log(err);
 				alert("Ошибка!")
-				location.href = "thank-you-page.html";
+
+				location.href = "sent.html";
 			} )
 			.finally( ( err ) => {} );
 			sendOrderForm.reset();
 		}
 	} else {
 		alert("Вы не выбрали дополнительный товар!")
+		// location.href = "sent.html";
 	}
 
 } );

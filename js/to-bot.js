@@ -1,7 +1,7 @@
 //Константи для бота телеграм
-// const TOKEN = '6876888038:AAEOSaVQM4wUjmoySghtx_E9aYgmj-yjx1k';
-// const CHAT_ID = '518855311';
-// const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+const TOKEN = '6876888038:AAEOSaVQM4wUjmoySghtx_E9aYgmj-yjx1k';
+const CHAT_ID = '518855311';
+const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 let productName = document.querySelector("title");
 const placeOrderForm = document.getElementById("placeOrderForm");
@@ -44,9 +44,8 @@ buttonOrderSend.addEventListener("click", ( e ) =>{
     })
     .then( ( res ) => {
         placeOrderForm.submit();
-        location.href = "sent.html";
+        // location.href = "sent.html";
 
-        // 	location.href = "supplementary_products.html";
     } )
     .catch( ( err ) => {
         console.log(err);
