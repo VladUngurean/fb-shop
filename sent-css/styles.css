@@ -2575,6 +2575,8 @@ label.added-upsell {
   text-shadow: 0 1px 0 #eee !important;
   border: 2px solid #f3f928 !important;
   transition: all ease 1s;
+
+  pointer-events: none;
 }
 
 /* Top notification END */

@@ -4,10 +4,11 @@ const CHAT_ID = '518855311';
 const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 let productName = document.querySelector("title");
-const placeOrderForm = document.getElementById("placeOrderForm");
+const placeOrderForm = document.getElementById("order_form");
 let buttonOrderSend = document.getElementById("buttonPlaceOrder");
 let nameInput = document.querySelector( '#userName' );
 //перевірка номеру
+console.log(placeOrderForm);
 
 let inputPhone = document.querySelector('#phone');
 // Маска для телефона
@@ -23,14 +24,8 @@ function checkInput() {
     }
 }
 
-function checkInput() {
-    if (inputPhone.value.length > 0 && inputPhone.value[5] == '0' || inputPhone.value[0] == 0) {
-        inputPhone.value = '';
-    }
-}
-
 buttonOrderSend.addEventListener("click", ( e ) =>{
-	// e.preventDefault();
+	e.preventDefault();
 	let massage = `<b>Заявка c сайта: ${productName.innerText}</b> \n`;
 		massage += `<b>Имя: ${nameInput.value} </b>\n`;
 		massage += `<b>Номер: ${inputPhone.value}</b>\n`;
@@ -45,15 +40,16 @@ buttonOrderSend.addEventListener("click", ( e ) =>{
     .then( ( res ) => {
         placeOrderForm.submit();
         // location.href = "sent.html";
-
+        
     } )
     .catch( ( err ) => {
         console.log(err);
+        placeOrderForm.reset();
+        location.href = "sent.html";
         alert("Ошибка!")
-        sendOrderForm.reset();
     } )
     .finally( ( err ) => {
-        sendOrderForm.reset();
+        // sendOrderForm.reset();
     } );
 	
 });

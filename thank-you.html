@@ -53,11 +53,35 @@
             Наши менеджеры уже скоро с вами свяжутся для уточнения деталей <br />
             Хорошего дня!
           </p>
+          <p>
+          <p style="font-size: 20px;"><b>Смотрите и другие наши предложения проходя по ссылке</b>:<a class="next-site" href="https://bazin.codeshop.md">Наши Товары</a></p>
+          </p>
         </div>
       </div>
     </main>
   </div>
+
+  <script>
+    function startTimer(duration, callback) {
+      let timer = duration;
+      const interval = setInterval(() => {
+        timer--;
+        console.log(timer); // You can replace this with any action you want
+        if (timer <= 0) {
+          clearInterval(interval);
+          callback();
+        }
+      }, 1000);
+    }
+
+    function myFunction() {
+      location.href = "https://bazin.codeshop.md/";
+    }
+
+    // Start the timer with a duration of 10 seconds and the callback function
+    startTimer(10, myFunction);
+  </script>
+
 </body>
 
 </html>
->
