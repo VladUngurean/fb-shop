@@ -127,15 +127,6 @@ h2.title {
   text-transform: uppercase;
 }
 
-h2.title:after {
-  display: block;
-  content: "";
-  margin: 15px 0 0;
-  width: 62px;
-  height: 5px;
-  background: url(../images/separator_red.png) center no-repeat;
-}
-
 h2.title span {
   color: #e43315;
 }
@@ -149,7 +140,6 @@ h2.title span {
 .separator {
   width: 62px;
   height: 5px;
-  background: url(../images/separator_red.png) center no-repeat;
 }
 
 .separator.white {
@@ -837,10 +827,6 @@ section .image {
 .description_section h2.title,
 .title_section h2.title {
   padding: 0 30px;
-}
-
-.description_section p {
-  padding: 0 30px 30px;
 }
 
 .description_section img {

@@ -24,16 +24,9 @@ let selectedSupplimentCounter = document.querySelector(".notification-top-quanti
 let countSuppElements = 0;
 console.log(countSuppElements);
 checkboxSupplementary.forEach(e => {
-
 	e.addEventListener("click", ()=>{
-		// if (e.checked) {
 			countSuppElements +=1;
 			console.log(countSuppElements);
-		// }
-		// if (!e.checked) {
-		// 	countSuppElements -=1;
-		// 	console.log(countSuppElements);
-		// }
 		if (countSuppElements > 0) {
 			selectedSupplimentCounter.innerHTML = `${countSuppElements}`;
 			selectedSupplimentWrapper.style.display = "block";
@@ -41,7 +34,6 @@ checkboxSupplementary.forEach(e => {
 				selectedSupplimentWrapper.style.display = "none";
 			}
 	})
-
 })
 
 const sendSuppProduct = document.querySelectorAll(".send-supp-product");
